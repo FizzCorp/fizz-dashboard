@@ -1,0 +1,71 @@
+/* container */
+.fizz-message {
+  padding-right: 8px;
+}
+
+.fizz-message-container {
+  display: flex;
+  font-size: 15px;
+  line-height: 18px;
+  flex-direction: row;
+  max-width: calc(85%);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 6px !important;
+  margin: 3px 0px !important;
+}
+
+/* cell */
+.fizz-time {
+  padding: 0 5px;
+  font-size: 11px;
+  word-break: normal;
+  align-self: flex-end;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.fizz-seen-icon {
+  padding: 0 3px;
+  align-self: flex-end;
+}
+
+.fizz-delete {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.fizz-moderate {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.fizz-translate {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.fizz-message-nick {
+  font-weight: bold;
+}
+
+.fizz-message-body {
+  font-size: 14px;
+}
+
+/* seperator */
+.fizz-seperator-text {
+  text-align: center;
+  border-radius: 5px;
+  color: #000000a1;
+  margin: 12px 0 !important;
+  font-size: 12px !important;
+  padding: 0px 5px !important;
+  background-color: #ffffffe0;
+}
+
+.fizz-seperator-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

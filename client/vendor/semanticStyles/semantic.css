@@ -1,0 +1,199 @@
+:root {
+  --errorColor: #ff3338;
+  --inputRadius: 2px;
+  --inputBorderColorFocus: rgba(34, 36, 38, 0.45);
+  --headingColor: #000;
+  --labelColor: #000;
+  --inputColor: #3b4b5a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headingColor) !important;
+  font-weight: 200;
+}
+
+input[type="date"],
+.ui.form input[type="url"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="time"],
+.ui.form input[type="text"],
+.ui.form input[type="file"],
+.ui.form textarea {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  /* margin-bottom: 1rem; */
+  border-radius: var(--inputRadius);
+}
+
+div,
+input[type="radio"],
+[type="checkbox"] + label[for],
+[type="radio"] + label[for] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ui.form input:not([type]):focus,
+.ui.form input[type="date"]:focus,
+.ui.form input[type="datetime-local"]:focus,
+.ui.form input[type="email"]:focus,
+.ui.form input[type="number"]:focus,
+.ui.form input[type="password"]:focus,
+.ui.form input[type="search"]:focus,
+.ui.form input[type="tel"]:focus,
+.ui.form input[type="time"]:focus,
+.ui.form input[type="text"]:focus,
+.ui.form input[type="file"]:focus,
+.ui.form input[type="url"]:focus,
+.ui.selection.dropdown:focus,
+.ui.form textarea:focus {
+  border-color: var(--inputBorderColorFocus);
+  border-radius: var(--inputRadius);
+}
+
+.ui.form .field > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--labelColor);
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.ui.form input[type="text"] {
+  color: var(--inputColor) !important;
+}
+
+.ui.form .field .prompt.label {
+  margin-bottom: 1rem;
+  border-radius: 0.28571429rem;
+  border-color: var(--errorColor) !important;
+  color: var(--errorColor) !important;
+}
+
+.ui.form .field.error label {
+  color: var(--errorColor);
+}
+
+.ui.form .field.error input,
+.ui.form .field.error textarea {
+  border-color: var(--errorColor) !important;
+  background: #fff !important;
+}
+
+.ui.form input:not([type]),
+.ui.form input[type="date"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="file"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="text"],
+.ui.form input[type="time"],
+.ui.form input[type="url"] {
+  padding: 0.47857143em 1em;
+}
+
+/* Semantic Colors for text only */
+[class*="red text custom"] {
+  color: #db2828;
+}
+
+/* Update these values wrt latest hash when used, then left align that section */
+.text.purple.custom {
+  color: #564f8a;
+}
+
+.text.pink.custom {
+  color: #d9499a;
+}
+
+.text.orange.custom {
+  color: #e07b53;
+}
+
+[class*="green text custom"] {
+  color: #21ba45;
+}
+
+[class*="blue text custom"] {
+  color: #2185d0 !important;
+}
+
+/* Semantic Colors for text only */
+/* Generic Styling */
+[class*="with left divider"] {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  @media only screen and (max-width: 40em) {
+    border-left-color: transparent;
+  }
+}
+
+[class*="less opacity"] {
+  opacity: 0.2;
+}
+
+[class*="no-link"] {
+  color: black !important;
+}
+
+/* Making semantic modal scrollable */
+.scrolling.undetached.dimmable.dimmed > .dimmer {
+  overflow: scroll !important;
+}
+
+.scrolling.undetached.dimmable.dimmed {
+  overflow: hidden !important;
+}
+
+/* Making semantic selection removeable */
+.ui.dropdown .remove.icon {
+  font-size: 0.857143em;
+  margin: 0;
+  padding: 0;
+  right: 3em;
+  top: auto;
+  position: absolute;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.ui.dropdown input[value=""] ~ .remove.icon,
+.ui.dropdown input:not([value]) ~ .remove.icon {
+  opacity: 0;
+}
+
+.ui.selection.dropdown.component {
+  min-height: auto !important;
+  height: 2.417em !important;
+  padding: 0.68571429em 2.1em 0.68571429em 1em !important;
+}
+
+/* Making semantic button icon's bg transparent removeable */
+.ui.labeled.icon.button > .icon,
+.ui.labeled.icon.buttons > .button > .icon {
+  background-color: transparent !important;
+}
+
+.ui.small.label {
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+@supports (-ms-ime-align: auto) and (not (-ms-accelerator: true)) {
+  table {
+    table-layout: fixed;
+  }
+  tr {
+    word-wrap: break-word;
+  }
+}

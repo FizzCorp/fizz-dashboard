@@ -1,0 +1,73 @@
+/* 
+	When reusing for company replace application with company 
+	or add company styling using comma seperation
+*/
+
+.list-application-outer {
+  width: 97%;
+  margin: 0 auto;
+  margin-top: 15px;
+
+  & div.popup {
+    display: inline-block;
+    padding-left: 0px;
+  }
+
+  & .table-container {
+    & th {
+      font-weight: normal !important;
+      color: #8a8a8a !important;
+    }
+
+    & .cubes.icon {
+      color: #8a8a8a;
+    }
+
+    & .sp.sp-wave {
+      top: 5px;
+      left: 3px;
+    }
+
+    & [class*="image list"] img {
+      border-radius: 0.3125em !important;
+    }
+  }
+
+  & .action-container {
+    margin-left: 40px;
+    margin-bottom: 20px;
+
+    & .action-btn {
+      margin-right: 20px;
+    }
+  }
+
+  & .list-application-blank-state {
+    margin-top: 102px;
+
+    & [class*="header normal-weight"] {
+      font-weight: normal;
+    }
+  }
+
+  & table {
+    & tr.c-first td {
+      /*padding-top: 0.9em !important;*/
+      /*padding-bottom: 0.9em !important;*/
+    }
+
+    & tr.c-second td {
+      border-top: none !important;
+      /*padding-top: 0.9em !important;*/
+      /*padding-bottom: 0.9em !important;*/
+    }
+  }
+}
+
+.ui.form.add-company .ui.checkbox label::before {
+  top: 5px;
+}
+
+.ui.form.add-company .ui.checkbox label::after {
+  top: 2px;
+}

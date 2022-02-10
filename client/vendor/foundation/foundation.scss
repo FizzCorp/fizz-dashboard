@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import "settings";
+@import "foundation-sites/scss/foundation";
+
+@include foundation-grid;
+@include foundation-flex-grid;
+
+@include foundation-forms;
+@include foundation-typography;
+@include foundation-flex-classes;
+@include foundation-global-styles;
+
+@include foundation-menu;
+@include foundation-table;
+@include foundation-tooltip;
+@include foundation-callout;
+@include foundation-thumbnail;
+
+@include foundation-flex-classes;
+@include foundation-float-classes;
+@include foundation-visibility-classes;
+
+table.my-stack {
+  @include breakpoint(small down) {
+    @include table-stack;
+    // you can also ad your own properties here too..
+    width: 100%;
+    thead,
+    tbody,
+    tfoot {
+      tr {
+        padding: 10px 0;
+      }
+      td {
+        padding: rem-calc(10 0 5 33);
+        .button.small {
+          padding: 10px 40px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

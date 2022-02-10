@@ -1,0 +1,102 @@
+/* --- General --- */
+button,
+a {
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+  }
+}
+
+/* --- Extending Foundation Classes --- */
+.menu-icon {
+  margin-right: 15px;
+}
+
+.menu-icon:after,
+.menu-icon:hover:after {
+  background: white;
+  background-color: white;
+  box-shadow: 0 7px 0 white, 0 14px 0 white;
+}
+
+.menu li {
+  padding: 0.7rem 1rem;
+}
+
+.menu > li > a {
+  padding: 0;
+}
+
+.top-bar {
+  padding: 0px 8px;
+  background-color: #3c4b5a;
+
+  & a {
+    color: #fff;
+  }
+
+  & .menu.dropdown {
+    justify-content: flex-end;
+    background-color: transparent;
+
+    & li:last-child {
+      padding-right: 0;
+    }
+
+    & .scrolling.menu {
+      border-top: none;
+    }
+
+    & > li > a {
+      top: 0.8rem;
+      position: relative;
+      line-height: 1.4rem;
+    }
+
+    & > li img.drop-down-icon-dimensions {
+      top: 19px;
+      left: 15px;
+      width: 16px;
+      height: 8px;
+      position: relative;
+    }
+  }
+
+  & .dashboard-logo-image {
+    width: 60px;
+    content: url("./Assets/fizzLogoWhite.svg");
+  }
+
+  & .ui.dropdown .menu .action-item {
+    display: block;
+    color: rgba(0, 0, 0, 0.7) !important;
+    padding: 0.78571429rem 1.14285714rem !important;
+
+    & i {
+      top: 2px;
+      font-size: 1.3em;
+      position: relative;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+/* --- Bread Crumbs --- */
+.breadcrumbs {
+  & li:not(:last-child):after {
+    top: 0;
+    content: ">";
+    color: #8a8a8a;
+    position: relative;
+  }
+}
+
+.bread-crumbs-container {
+  min-height: 65px;
+  background-color: #eee;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}

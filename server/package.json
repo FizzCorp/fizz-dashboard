@@ -1,0 +1,48 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Fizz Dashboard Backend.",
+  "main": "server.js",
+  "scripts": {
+    "docker:dashboard:config": "/usr/local/bin/docker-compose config",
+    "docker:dashboard:setup": "/usr/local/bin/docker-compose up --build -d",
+    "docker:dashboard:stop": "/usr/local/bin/docker-compose down --rmi local",
+    "start": "node server.js",
+    "develop": "NODE_ENV=development nodemon server.js",
+    "test": "find . -name '*.spec.js' -and -not -path './node_modules/*' | xargs mocha -R spec",
+    "coverage": "nyc npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carameltec/fizz-dashboard.git"
+  },
+  "author": "Hassan Tariq",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.2",
+    "express": "^4.16.4",
+    "got": "^6.5.0",
+    "joi": "^9.0.4",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "newrelic": "^4.13.0",
+    "pg": "^6.1.0",
+    "sequelize": "^5.18.4",
+    "slack-node": "^0.1.8",
+    "uuid": "3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "chai": "^3.5.0",
+    "eslint": "^6.3.0",
+    "eslint-config-google": "^0.9.1",
+    "mocha": "^8.3.0",
+    "nodemon": "^1.19.2",
+    "sinon": "^7.2.7",
+    "supertest": "^3.4.2"
+  }
+}

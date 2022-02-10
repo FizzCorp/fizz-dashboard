@@ -1,0 +1,35 @@
+version: "2.0"
+services:
+  web:
+    container_name: ${COMPOSE_PROJECT_NAME}_web
+    network_mode: bridge
+    build: .
+    depends_on:
+      - db
+    command: sh -c './scripts/run-migrations-seeders.sh && npm run start:testing'
+    links:
+      - db
+    environment:
+      - PG_HOST=db
+      - FIZZCHAT_SANDBOX_URL=http://${APP_SERVER_IP}:3000
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - MS_TRANSLATION_SECRET=${MS_TRANSLATION_SECRET}
+      - TOPICS_BUCKET=${TOPICS_BUCKET}
+      - TOPICS_CDN=${TOPICS_CDN}
+      - PROD_ACCOUNT_ACCESS_ID=${PROD_ACCOUNT_ACCESS_ID}
+      - PROD_ACCOUNT_ACCESS_KEY=${PROD_ACCOUNT_ACCESS_KEY}
+      - FIZZ_ADMIN_SECRET_KEY=${FIZZ_ADMIN_SECRET_KEY}
+    volumes:
+      - .:/code
+  db:
+    container_name: ${COMPOSE_PROJECT_NAME}_db
+    network_mode: bridge
+    image: postgres:9.5
+    ports: 
+      - "5432"
+    environment:
+      - DEBUG=false
+      - POSTGRES_USER=fizz 
+      - POSTGRES_PASSWORD=pass 
+      - POSTGRES_DB=fizz_dashboard_testing
